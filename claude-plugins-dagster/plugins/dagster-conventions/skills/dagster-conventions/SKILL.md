@@ -1,5 +1,5 @@
 ---
-name: dagster-development
+name: dagster-conventions
 description: Expert guidance for Dagster data orchestration including assets, resources, schedules, sensors, partitions, testing, and ETL patterns. Use when building or extending Dagster projects, writing assets, configuring automation, or integrating with dbt/dlt/Sling.
 ---
 

@@ -7,7 +7,7 @@ A collection of Claude Code plugins for working with Dagster.
 Add this marketplace to Claude Code:
 
 ```
-/plugin marketplace add cmpadden/claude-plugins-dagster
+/plugin marketplace add dagster-io/claude-plugins-dagster
 ```
 
 Install a plugin:

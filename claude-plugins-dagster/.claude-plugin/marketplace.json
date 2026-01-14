@@ -13,6 +13,11 @@
       "name": "dagster-conventions",
       "source": "./plugins/dagster-conventions",
       "description": "Comprehensive Dagster development conventions and best practices"
+    },
+    {
+      "name": "dagster-integrations",
+      "source": "./plugins/dagster-integrations",
+      "description": "Comprehensive index of 82+ Dagster integrations for cloud platforms, data warehouses, ETL tools, AI/ML, and more"
     }
   ]
 }

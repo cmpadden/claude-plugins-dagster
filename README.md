@@ -8,12 +8,11 @@
 
 AI assistant skills for building workflows and data pipelines using Dagster.
 
-**Compatible with Claude Code, OpenCode, OpenAI Codex, Pi, and other Agent Skills-compatible
-tools.**
+**Compatible with Claude Code, OpenCode, OpenAI Codex, Pi, and other Agent Skills-compatible tools.**
 
 ## Installation
 
-### Claude Code (Marketplace)
+### Claude Code
 
 Install using the
 [Claude plugin marketplace](https://code.claude.com/docs/en/discover-plugins#add-from-github):
@@ -30,9 +29,10 @@ Install using the [`npx skills`](https://skills.sh/) command-line:
 npx skills add dagster-io/skills
 ```
 
-This will install all skills to `~/.claude/skills/`.
-
 ### Manual Installation
+
+<details>
+<summary>See full instructions...</summary>
 
 Clone the repository and copy skills to your tool's skills directory:
 
@@ -57,43 +57,56 @@ git clone https://github.com/dagster-io/skills.git
 cp -r skills/plugins/* ~/.pi/agent/skills/
 ```
 
+</details>
+
 ## Skills
 
 ### dg
 
-Commands for building executing, and debugging Dagster projects.
+Commands for building, executing, and debugging Dagster projects.
 
-Discover:
-
-- `/dg:list` - List and inspect Dagster definitions, components, environment variables, and project
-  structure
-  - `dg list defs` - Show all registered definitions (assets, jobs, schedules, sensors, resources)
-  - `dg list components` - Discover available component types for scaffolding
-  - `dg list envs` - Inspect environment variables and Dagster Plus secrets
-  - `dg list projects` - List projects in workspace
-  - Supports asset selection (tags, groups, kinds, patterns) and JSON output
-
-Build:
-
-- `/dg:create-project <name>` - Create a new Dagster project with recommended structure
-- `/dg:create-workspace <name>` - Initialize a workspace for managing multiple projects
-- `/dg:scaffold` - Scaffold Dagster components, assets, schedules, sensors, and integrations
-  - Dynamically discover and create component instances (assets, schedules, sensors)
-  - Integrate with dbt, Fivetran, dlt, Sling, and other tools
-  - Support for both YAML and Python formats
-  - Interactive component type disambiguation
-- `/dg:prototype <requirements>` - Build production-ready Dagster implementations with best
-  practices, testing, and validation
-
-Execute:
-
-- `/dg:launch` - Launch (materialize) Dagster assets with comprehensive guidance on partitions,
-  configuration, environment setup, and troubleshooting
-
-Debug:
-
-- `/dg:logs <run-id> [level] [limit]` - Retrieve and display logs for a run
-- `/dg:troubleshoot <run-id>` - Debug failing runs by analyzing error logs
+<table>
+  <thead>
+    <tr>
+      <th width="30%">Command</th>
+      <th width="70%">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>/dg:list</code></td>
+      <td>List and inspect Dagster definitions, components, environment variables, and project structure</td>
+    </tr>
+    <tr>
+      <td><code>/dg:create-project &lt;name&gt;</code></td>
+      <td>Create a new Dagster project with recommended structure</td>
+    </tr>
+    <tr>
+      <td><code>/dg:create-workspace &lt;name&gt;</code></td>
+      <td>Initialize a workspace for managing multiple projects</td>
+    </tr>
+    <tr>
+      <td><code>/dg:scaffold</code></td>
+      <td>Scaffold Dagster components, assets, schedules, sensors, and integrations</td>
+    </tr>
+    <tr>
+      <td><code>/dg:prototype &lt;requirements&gt;</code></td>
+      <td>Build production-ready Dagster implementations with best practices, testing, and validation</td>
+    </tr>
+    <tr>
+      <td><code>/dg:launch</code></td>
+      <td>Launch (materialize) Dagster assets with comprehensive guidance on partitions, configuration, environment setup, and troubleshooting</td>
+    </tr>
+    <tr>
+      <td><code>/dg:logs &lt;run-id&gt; [level] [limit]</code></td>
+      <td>Retrieve and display logs for a run</td>
+    </tr>
+    <tr>
+      <td><code>/dg:troubleshoot &lt;run-id&gt;</code></td>
+      <td>Debug failing runs by analyzing error logs</td>
+    </tr>
+  </tbody>
+</table>
 
 ### dagster-conventions
 

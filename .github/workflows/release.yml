@@ -63,7 +63,7 @@ jobs:
       - name: Commit version bump
         run: |
           git add CHANGELOG.md
-          git add plugins/*/.claude-plugin/plugin.json
+          git add .claude-plugin/plugin.json
           git commit -m "Bump version to ${{ inputs.version }}"
 
       - name: Create tag

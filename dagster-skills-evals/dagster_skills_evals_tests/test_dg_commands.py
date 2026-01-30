@@ -3,7 +3,6 @@ import tempfile
 from pathlib import Path
 
 from dagster_skills_evals.execution import execute_prompt
-
 from dagster_skills_evals_tests.conftest import BaselineManager
 from dagster_skills_evals_tests.utils import unset_virtualenv
 
@@ -22,9 +21,7 @@ def test_create_dagster_project(baseline_manager: BaselineManager):
         # make sure the generated project is valid
         project_dir = Path(tmp_dir) / project_name
 
-        subprocess.run(
-            ["uv", "run", "dg", "list", "projects"], cwd=project_dir, check=True
-        )
+        subprocess.run(["uv", "run", "dg", "list", "projects"], cwd=project_dir, check=True)
         subprocess.run(["uv", "run", "dg", "list", "defs"], cwd=project_dir, check=True)
 
         baseline_manager.assert_improved(result.summary)

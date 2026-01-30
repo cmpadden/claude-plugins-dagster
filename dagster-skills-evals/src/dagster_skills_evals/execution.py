@@ -119,7 +119,7 @@ class ClaudeExecutionResult:
         return result
 
     def conversation_summary(self) -> str:
-        return "\n".join([f"{message['role']}: {message['content']}" for message in self.messages])
+        return "\n".join([json.dumps(message, indent=2) for message in self.messages])
 
 
 def run_claude_headless(

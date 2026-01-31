@@ -8,7 +8,7 @@ from typing import Any
 from dagster_shared.record import record
 from dagster_shared.serdes import whitelist_for_serdes
 
-_PLUGINS_DIR = Path(__file__).parent.parent.parent.parent / "plugins"
+_PLUGINS_DIR = Path(__file__).parent.parent.parent.parent / "skills"
 
 
 @whitelist_for_serdes
